@@ -5,7 +5,7 @@ let myToken;
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [money, setMoney] = useState("");
+  const [amount, setAmount] = useState("");
 
   function handleLogin() {
     const user = {
@@ -41,7 +41,7 @@ function Login() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setMoney(data.money);
+        setAmount(data.amount);
       });
   }
 
@@ -59,7 +59,7 @@ function Login() {
         <h2>Account</h2>
         <button onClick={handleGetAccount}>Get account</button>
       </div>
-      <div>{money}</div>
+      <div>{amount}</div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ function App() {
       password: password,
       amount: amount,
     };
+    console.log("user: ", user);
 
     fetch("http://localhost:4001/users", {
       method: "POST",
